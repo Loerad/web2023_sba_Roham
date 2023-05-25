@@ -1,5 +1,4 @@
 <script>
-
     import { page } from '$app/stores';
     
     const location_id = $page.url.searchParams.get('id');

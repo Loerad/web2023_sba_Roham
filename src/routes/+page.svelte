@@ -1,3 +1,85 @@
+<script>
+    import { onMount } from "svelte";
+
+const BASE_URL = "https://rickandmortyapi.com/api";
+let d;
+onMount(async () => {
+        const f = await fetch(`${BASE_URL}/character`);
+        d = await f.json();
+        console.log(d)
+    })
+</script>
+
+<div class="grid">
+
+    <div class="card">
+        <div class="image"></div>
+        <div class="info">
+            <h1 class="name">Evil Rick</h1>
+            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+
+            <h3 class="locationLabel">Last known location</h3>
+            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image"></div>
+        <div class="info">
+            <h1 class="name">Evil Rick</h1>
+            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+
+            <h3 class="locationLabel">Last known location</h3>
+            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image"></div>
+        <div class="info">
+            <h1 class="name">Evil Rick</h1>
+            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+
+            <h3 class="locationLabel">Last known location</h3>
+            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image"></div>
+        <div class="info">
+            <h1 class="name">Evil Rick</h1>
+            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+
+            <h3 class="locationLabel">Last known location</h3>
+            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image"></div>
+        <div class="info">
+            <h1 class="name">Evil Rick</h1>
+            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+
+            <h3 class="locationLabel">Last known location</h3>
+            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image"></div>
+        <div class="info">
+            <h1 class="name">Evil Rick</h1>
+            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+
+            <h3 class="locationLabel">Last known location</h3>
+            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+        </div>
+    </div>
+
+</div>
+
 <style>
 
     .grid{
@@ -79,73 +161,3 @@
 
 
 </style>
-
-<div class="grid">
-
-    <div class="card">
-        <div class="image"></div>
-        <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
-
-            <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="image"></div>
-        <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
-
-            <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="image"></div>
-        <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
-
-            <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="image"></div>
-        <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
-
-            <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="image"></div>
-        <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
-
-            <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="image"></div>
-        <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
-
-            <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
-        </div>
-    </div>
-
-</div>
