@@ -3,81 +3,84 @@
 
 const BASE_URL = "https://rickandmortyapi.com/api";
 let d;
+let people;
+let count = 6;
+let peopleName;
 onMount(async () => {
-        const f = await fetch(`${BASE_URL}/character`);
+        const f = await fetch(`${BASE_URL}/character/`);
         d = await f.json();
-        console.log(d)
+        console.log(d);
+        people = d
     })
 </script>
 
+
 <div class="grid">
-
     <div class="card">
-        <div class="image"></div>
+        <img class="image" src={people?.results[0]?.image} />
         <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+            <h1 class="name">{people?.results[0]?.name}</h1>
+            <h3 class="status"><div class="alive"></div>{people?.results[0]?.status}</h3>
 
             <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+            <h3 class="location"><a href="/location">{people?.results[0]?.location?.name}</a></h3>
         </div>
     </div>
 
     <div class="card">
-        <div class="image"></div>
+        <img class="image" src={people?.results[4]?.image} />
         <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+            <h1 class="name">{people?.results[4]?.name}</h1>
+            <h3 class="status"><div class="alive"></div>{people?.results[4]?.status}</h3>
 
             <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+            <h3 class="location"><a href="/location">{people?.results[4]?.location?.name}</a></h3>
         </div>
     </div>
 
     <div class="card">
-        <div class="image"></div>
+        <img class="image" src={people?.results[7]?.image} />
         <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+            <h1 class="name">{people?.results[7]?.name}</h1>
+            <h3 class="status"><div class="dead"></div>{people?.results[7].status}</h3>
 
             <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+            <h3 class="location"><a href="/location">{people?.results[7].location?.name}</a></h3>
         </div>
     </div>
 
     <div class="card">
-        <div class="image"></div>
+        <img class="image" src={people?.results[10]?.image} />
         <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+            <h1 class="name">{people?.results[10]?.name}</h1>
+            <h3 class="status"><div class="dead"></div>{people?.results[10].status}</h3>
 
             <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+            <h3 class="location"><a href="/location">{people?.results[10].location?.name}</a></h3>
         </div>
     </div>
 
     <div class="card">
-        <div class="image"></div>
+        <img class="image" src={people?.results[4]?.image} />
         <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+            <h1 class="name">{people?.results[4]?.name}</h1>
+            <h3 class="status"><div class="alive"></div>{people?.results[4].status}</h3>
 
             <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+            <h3 class="location"><a href="/location">{people?.results[4].location?.name}</a></h3>
         </div>
     </div>
 
     <div class="card">
-        <div class="image"></div>
+        <img class="image" src={people?.results[19]?.image} />
         <div class="info">
-            <h1 class="name">Evil Rick</h1>
-            <h3 class="status"><div class="dead"></div> Dead - Humanoid</h3>
+            <h1 class="name">{people?.results[19]?.name}</h1>
+            <h3 class="status"><div class="unknown"></div>{people?.results[19].status}</h3>
 
             <h3 class="locationLabel">Last known location</h3>
-            <h3 class="location"><a href="#">Citadel of Ricks</a></h3>
+            <h3 class="location"><a href="/location">{people?.results[19].location?.name}</a></h3>
         </div>
     </div>
-
 </div>
 
 <style>
@@ -98,7 +101,6 @@ onMount(async () => {
 
     .image{
         width:30%;
-        background-image:url('https://rickandmortyapi.com/api/character/avatar/119.jpeg');
         background-size:cover;
         background-position:center;
     }
@@ -112,6 +114,20 @@ onMount(async () => {
 
     .dead{
         background:firebrick;
+        width:10px;
+        height:10px;
+        border-radius:100%;
+        margin-right:10px;
+    }
+    .alive{
+        background:green;
+        width:10px;
+        height:10px;
+        border-radius:100%;
+        margin-right:10px;
+    }
+    .unknown{
+        background:grey;
         width:10px;
         height:10px;
         border-radius:100%;
